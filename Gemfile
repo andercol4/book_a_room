@@ -3,6 +3,8 @@ ruby '2.2.2'
 gem 'materialize-sass'
 gem 'font-awesome-sass-rails'
 gem  'devise', '~> 3.4.0'
+gem 'momentjs-rails'
+gem 'fullcalendar-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

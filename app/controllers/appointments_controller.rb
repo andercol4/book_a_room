@@ -1,9 +1,13 @@
 class AppointmentsController < ApplicationController
-  before_action: :find_appointment, except: [:index, :new, :create]
+  before_action :find_appointment, except: [:index, :new, :create, :date]
   def index
     @room1 = Appointment.where(room_number: 1)
     @room2 = Appointment.where(room_number: 2)
     @room3 = Appointment.where(room_number: 3)
+  end
+
+  def date
+
   end
 
   def show
