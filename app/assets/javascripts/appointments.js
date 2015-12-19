@@ -7,7 +7,7 @@ $(document).ready(function(){
   $('#calendar').fullCalendar({
       dayClick: function() {
         $date = $(this).data().date;
-      
+
         window.location.pathname = '/appointmentsdate/' + $date
 
         // $.ajax('/appointmentsdate/' + $date, {
@@ -35,5 +35,8 @@ $(document).ready(function(){
     var endTime = new Date(dateTime);
     debugger
   }
+
+  $('select').material_select();
+
 
 });

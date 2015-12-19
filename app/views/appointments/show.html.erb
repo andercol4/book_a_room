@@ -1,2 +1,21 @@
-<h1>Appointments#show</h1>
-<p>Find me in app/views/appointments/show.html.erb</p>
+<h1>Your appointment</h1>
+
+
+<%= @appointment.first_name %>
+
+<%= @appointment.last_name %>
+
+<p>
+  Your appointment starts at:
+</p>
+<%= @appointment.start_time %>
+
+
+<p>
+  Your appointment ends at:
+</p>
+<%= @appointment.end_time %>
+
+<%#= link_to "Home", root_path %>
+
+<%#= link_to "Calendar", appointments_path %>
