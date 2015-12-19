@@ -7,6 +7,8 @@ class AppointmentsController < ApplicationController
   end
 
   def date
+    @date = params[:date].to_datetime
+    @appointment = Appointment.new
 
   end
 
@@ -18,6 +20,7 @@ class AppointmentsController < ApplicationController
 
   def create
     @appointment = Appointment.new(appointment_params)
+    #TODO If it is greater than start time but less than the end time
     if @appointment.save
       redirect_to appointment_path(@appointment)
     else
@@ -43,6 +46,14 @@ class AppointmentsController < ApplicationController
       render :new
     end
   end
+
+
+
+
+
+
+
+
 
   private
 

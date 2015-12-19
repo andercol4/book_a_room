@@ -5,7 +5,19 @@ $(document).ready(function(){
 
   $('#calendar').fullCalendar({
       dayClick: function() {
-        window.location.pathname = '/appointmentsdate/' +$(this).data().date;
+
+        var $date = $(this).data().date;
+        $.ajax('/appointmentsdate/' + $date, {
+          type: 'GET',
+          dataType: 'HTML',
+          success: function(data){
+            
+            $("#calendar").html(data)
+          },
+          error: function(data){
+            debugger;
+          }
+        })
       }
   });
 
