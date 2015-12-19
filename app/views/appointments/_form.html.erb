@@ -9,5 +9,17 @@
   <br />
   <%= f.label :email %>
   <%= f.text_field :email  %>
+  <br />
+  <%= f.label :start_time %>
+  <%= f.time_field :start_time  %>
+  <br />
+  <%= f.label :end_time %>
+  <%= f.time_field :end_time  %>
+  <br />
+  <%= f.label :room_number %>
+  <%= f.select :room_number, [1,2,3]  %>
+  <br />
+  <%= f.submit %>
+
 <% end %>
 </div>

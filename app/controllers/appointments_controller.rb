@@ -19,8 +19,9 @@ class AppointmentsController < ApplicationController
   end
 
   def create
+    # binding.pry
+
     @appointment = Appointment.new(appointment_params)
-    #TODO If it is greater than start time but less than the end time
     if @appointment.save
       redirect_to appointment_path(@appointment)
     else
